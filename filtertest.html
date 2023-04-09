@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Öl i solen</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    .card {
+      border: 1px solid black;
+      padding: 10px;
+      margin-bottom: 10px;
+      display: none;
+    }
+    .show {
+      display: block;
+    }
+
+  </style>
+
+  <link rel="stylesheet" type="text/css" href="filtertest.css">
+
+  <script>
+      function search() {
+        let input = document.getElementById("search-input");
+        let filter = input.value.toUpperCase();
+        let cards = document.getElementsByClassName("card");
+        for (let i = 0; i < cards.length; i++) {
+          let title = cards[i].getElementsByClassName("card-info")[0].getElementsByTagName("h3")[0];
+          if (title.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            cards[i].style.display = "";
+          } else {
+            cards[i].style.display = "none";
+          }
+        }
+      }
+    </script>
+
+</head>
+
+<body>
+
+<header>
+  <img class="logo" src="öl.svg">
+  <h1>Solölen</h1>
+  <div class="beta-badge">Beta</div>
+</header>
+
+<div class="content">
+
+  <div class="search-filter">
+  <div class="search">
+    <input type="text" id="search-input" onkeyup="search()" placeholder="Sök efter bar..">
+  </div>
+
+  <div class="filter">
+    <select id="filter">
+      <option value="all">Alla tider</option>
+      <option value="frukost">Frukost</option>
+      <option value="lunch">Lunch</option>
+      <option value="eftermiddag">Eftermiddag</option>
+      <option value="kväll">Kväll</option>
+    </select>
+  </div>
+</div>
+
+  <h2 class="title">Vasastan</h2>
+
+  <div class="card" data-hours="lunch" data-query="McLarens Bar">
+      <img src="beer.avif" alt="Bar Image">
+      <div class="card-info">
+        <h3>McLarens</h3>
+        <p>Sol mellan: 11:00-12:00 ish</p>
+      </div>
+  </div>
+  <div class="card" data-hours="frukost,lunch" data-query="Sandhäxan Vasastan">
+    <img src="beer.avif" alt="Bar Image">
+    <div class="card-info">
+      <h3>Sandhäxan</h3>
+      <p>Sol mellan: 10:00-11:30</p>
+    </div>
+  </div>
+  <div class="card" data-hours="lunch,eftermiddag" data-query="Flying Horse Bar">
+    <img src="beer.avif" alt="Bar Image">
+    <div class="card-info">
+      <h3>Flying Horse</h3>
+      <p>Sol mellan: 11:00-16:00</p>
+    </div>
+  </div>
+  <div class="card" data-hours="eftermiddag" data-query="Bierhouse Stockholm">
+    <img src="beer.avif" alt="Bar Image">
+    <div class="card-info">
+      <h3>Bierhouse (SO-sidan)</h3>
+      <p>Sol mellan: 14:00?-16:00</p>
+    </div>
+  </div>
+  <div class="card" data-hours="lunch" data-query="Hirschenkeller Vasastan">
+    <img src="beer.avif" alt="Bar Image">
+    <div class="card-info">
+      <h3>Hirschenkeller</h3>
+      <p>Sol mellan: 11:00-11:30</p>
+    </div>
+  </div>
+  <div class="card" data-hours="lunch,eftermiddag" data-query="Pub Anchor Vasastan">
+    <img src="beer.avif" alt="Bar Image">
+    <div class="card-info">
+      <h3>Pub Anchor</h3>
+      <p>Sol mellan: 11:30-16:00</p>
+    </div>
+  </div>
+  <div class="card" data-hours="eftermiddag" data-query="AW-Bar Vasastan">
+    <img src="beer.avif" alt="Bar Image">
+    <div class="card-info">
+      <h3>AW-Bar</h3>
+      <p>Sol mellan: 16:15-17:30</p>
+    </div>
+  </div>
+  <div class="card" data-hours="lunch" data-query="The Old Brewer Vasastan">
+    <img src="beer.avif" alt="Bar Image">
+    <div class="card-info">
+      <h3>The Old Brewer</h3>
+      <p>Sol mellan: 11:15?-13:15</p>
+    </div>
+  </div>
+  <div class="card" data-hours="lunch,eftermiddag" data-query="Retro Sveavägen">
+    <img src="beer.avif" alt="Bar Image">
+    <div class="card-info">
+      <h3>Retro Sveavägen (SVV-sidan)</h3>
+      <p>Sol mellan: 11:30-18:00</p>
+    </div>
+  </div><div class="card" data-hours="lunch" data-query="Restaurang Lilla Prag Vasastan">
+    <img src="beer.avif" alt="Bar Image">
+    <div class="card-info">
+        <h3>Restaurang Lilla Prag</h3>
+        <p>Öppet: 16:00-18:30</p>
+    </div>
+</div>
+
+<div class="card" data-hours="frukost">
+    <img src="beer.avif" alt="Bar Image">
+    <div class="card-info">
+        <h3>Rörstrandsgatan södra sidan</h3>
+        <p>Öppet: 07:00-09:00</p>
+    </div>
+</div>
+
+<div class="card" data-hours="morgon,eftermiddag,kväll">
+    <img src="beer.avif" alt="Bar Image">
+    <div class="card-info">
+        <h3>Rörstrandsgatan norra sidan</h3>
+        <p>Öppet: 08:45-10:15 och 17:30-19:15</p>
+    </div>
+</div>
+
+<div class="card" data-hours="eftermiddag" data-query="La Neta Vasastan">
+    <img src="beer.avif" alt="Bar Image">
+    <div class="card-info">
+        <h3>La Neta</h3>
+        <p>Öppet: 13:30-16:00</p>
+    </div>
+</div>
+
+<div class="card" data-hours="lunch,eftermiddag" data-query="Observatoriegrillen">
+    <img src="beer.avif" alt="Bar Image">
+    <div class="card-info">
+        <h3>Observatoriegrillen</h3>
+        <p>Öppet: 11:30-16:15</p>
+    </div>
+</div>
+
+<div class="card" data-hours="frukost,lunch,eftermiddag,kväll" data-query="Urban Deli Sveavägen">
+    <img src="beer.avif" alt="Bar Image">
+    <div class="card-info">
+        <h3>Urban Deli</h3>
+        <p>Öppet: Till sunset</p>
+    </div>
+</div>
+  
+
+
+</div>
+
+
+
+
+  <script>
+    const filter = document.getElementById('filter');
+    const cards = document.querySelectorAll('.card');
+
+    filter.addEventListener('change', function() {
+      const selectedValue = filter.value;
+      for (let i = 0; i < cards.length; i++) {
+        const cardHours = cards[i].getAttribute('data-hours').split(',');
+        if (selectedValue === 'all' || cardHours.includes(selectedValue)) {
+          cards[i].classList.add('show');
+        } else {
+          cards[i].classList.remove('show');
+        }
+      }
+    });
+
+    window.addEventListener('load', function() {
+  if (filter.value === 'all') {
+    for (let i = 0; i < cards.length; i++) {
+      cards[i].classList.add('show');
+    }
+  }
+});
+
+  </script>
+
+<script>
+
+//working for one card
+
+// const card = document.querySelector('.card');
+
+// card.addEventListener('click', () => {
+//   const searchQuery = card.dataset.query;
+
+//   if (confirm('Do you want to get directions via Google Maps?')) {
+//     window.open(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(searchQuery)}`);
+//   }
+// });
+
+const directions = document.querySelectorAll('.card');
+
+directions.forEach(direction => {
+  const searchQuery = direction.dataset.query;
+
+  direction.addEventListener('click', () => {
+    if (confirm(`Do you want to get directions to ${searchQuery} via Google Maps?`)) {
+      window.open(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(searchQuery)}`);
+    }
+  });
+});
+
+</script>
+
+</body>
+</html>
