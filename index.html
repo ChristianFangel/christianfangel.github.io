@@ -41,8 +41,8 @@
 <body>
 
 <header>
-  <img class="logo" src="images/logo.svg">
-  <h1>Solölen</h1>
+  <img class="logo" src="öl.svg" onclick="location.reload();">
+  <h1 onclick="location.reload();">Solölen</h1>
   <div class="beta-badge">Beta</div>
 </header>
 
@@ -71,6 +71,7 @@
       <div class="card-info">
         <h3>McLarens</h3>
         <p>Sol mellan: 11:00-12:00 ish</p>
+        <p>Ölpris: 48 kr</p>
       </div>
   </div>
   <div class="card" data-hours="frukost,lunch" data-query="Sandhäxan Vasastan">
@@ -132,23 +133,23 @@
     <img src="beer.avif" alt="Bar Image">
     <div class="card-info">
         <h3>Restaurang Lilla Prag</h3>
-        <p>Öppet: 16:00-18:30</p>
+        <p>Sol mellan: 16:00-18:30</p>
     </div>
 </div>
 
-<div class="card" data-hours="frukost">
+<div class="card" data-hours="frukost" data-query="Rörstrandsgatan">
     <img src="beer.avif" alt="Bar Image">
     <div class="card-info">
         <h3>Rörstrandsgatan södra sidan</h3>
-        <p>Öppet: 07:00-09:00</p>
+        <p>Sol mellan: 07:00-09:00</p>
     </div>
 </div>
 
-<div class="card" data-hours="morgon,eftermiddag,kväll">
+<div class="card" data-hours="morgon,eftermiddag,kväll" data-query="Rörstrandsgatan">
     <img src="beer.avif" alt="Bar Image">
     <div class="card-info">
         <h3>Rörstrandsgatan norra sidan</h3>
-        <p>Öppet: 08:45-10:15 och 17:30-19:15</p>
+        <p>Sol mellan: 08:45-10:15 och 17:30-19:15</p>
     </div>
 </div>
 
@@ -156,7 +157,7 @@
     <img src="beer.avif" alt="Bar Image">
     <div class="card-info">
         <h3>La Neta</h3>
-        <p>Öppet: 13:30-16:00</p>
+        <p>Sol mellan: 13:30-16:00</p>
     </div>
 </div>
 
@@ -164,7 +165,7 @@
     <img src="beer.avif" alt="Bar Image">
     <div class="card-info">
         <h3>Observatoriegrillen</h3>
-        <p>Öppet: 11:30-16:15</p>
+        <p>Sol mellan: 11:30-16:15</p>
     </div>
 </div>
 
@@ -172,10 +173,104 @@
     <img src="beer.avif" alt="Bar Image">
     <div class="card-info">
         <h3>Urban Deli</h3>
-        <p>Öppet: Till sunset</p>
+        <p>Sol mellan: Hela dagen</p>
     </div>
 </div>
-  
+
+<div class="card" data-hours="frukost,eftermiddag,kväll" data-query="Eatnam Vasastan">
+    <img src="beer.avif" alt="Bar Image">
+    <div class="card-info">
+        <h3>Eatnam</h3>
+        <p>Sol mellan: 09:45-11:30 och 16:00-18:45</p>
+    </div>
+</div>
+
+<div class="card" data-hours="frukost,lunch,eftermiddag" data-query="Tennstopet Vasastan">
+    <img src="beer.avif" alt="Bar Image">
+    <div class="card-info">
+        <h3>Tennstopet</h3>
+        <p>Sol mellan: 06:00?-15:45? (under träd)</p>
+    </div>
+</div>
+
+<div class="card" data-hours="frukost,lunch,eftermiddag" data-query="Italian Cousins Vasastan">
+    <img src="beer.avif" alt="Bar Image">
+    <div class="card-info">
+        <h3>Italian Cousins (under träd)</h3>
+        <p>Sol mellan: 06:00?-15:45?</p>
+    </div>
+</div>
+
+<div class="card" data-hours="frukost,eftermiddag" data-query="Take Ramen Vasastan">
+    <img src="beer.avif" alt="Bar Image">
+    <div class="card-info">
+        <h3>Take Ramen (under markis)</h3>
+        <p>Sol mellan: 11:15-15:15</p>
+    </div>
+</div>
+
+<div class="card" data-hours="eftermiddag,kväll" data-query="Sangria Tapas Bar Vasastan">
+    <img src="beer.avif" alt="Bar Image">
+    <div class="card-info">
+        <h3>Sangria Tapas Bar (markisrisk)</h3>
+        <p>Sol mellan: 13:15-19:45? och 20:15-21:00</p>
+    </div>
+</div>
+
+<div class="card" data-hours="eftermiddag,kväll" data-query="Ciao Ciao IV Vasastan">
+    <img src="beer.avif" alt="Bar Image">
+    <div class="card-info">
+        <h3>Ciao Ciao IV (markisrisk)</h3>
+        <p>Sol mellan: 13:15-19:30? och 20:00-21:00</p>
+    </div>
+</div>
+
+<div class="card" data-hours="lunch,eftermiddag,kväll" data-query="Muskot Vasastan">
+    <img src="beer.avif" alt="Bar Image">
+    <div class="card-info">
+        <h3>Muskot (markisrisk)</h3>
+        <p>Sol mellan: 11:30?-18:45-</p>
+    </div>
+</div>
+
+<div class="card" data-hours="lunch,eftermiddag" data-query="Linguini Vasastan">
+    <img src="beer.avif" alt="Bar Image">
+    <div class="card-info">
+        <h3>Linguini (markisrisk)</h3>
+        <p>Sol mellan: 12:00-15:45</p>
+    </div>
+</div>
+
+<div class="card" data-hours="eftermiddag,kväll" data-query="Chipiron by Jim & Jacobs Vasastan">
+    <img src="beer.avif" alt="Bar Image">
+    <div class="card-info">
+        <h3>Chipiron by Jim & Jacobs (markisrisk)</h3>
+        <p>Sol mellan: 10:00-15:45</p>
+        <p>Storlek: Liten</p>
+    </div>
+</div>
+
+<div class="card" data-hours="lunch,eftermiddag" data-query="Pizzeria Quattro Vasastan">
+    <img src="beer.avif" alt="Bar Image">
+    <div class="card-info">
+        <h3>Pizzeria Quattro</h3>
+        <p>Sol mellan: 11:45-15:15</p>
+        <p>Storlek: Liten</p>
+    </div>
+</div>
+
+
+
+
+<h2 class="title">Norrmalm</h2>
+
+<div class="card" data-hours="eftermiddag,kväll" data-query="Eatnam Vasastan">
+    <img src="beer.avif" alt="Bar Image">
+    <div class="card-info">
+        <h3>Test Bar</h3>
+        <p>Sol mellan: Till sunset</p>
+    </div>
+</div>
 
 
 </div>
